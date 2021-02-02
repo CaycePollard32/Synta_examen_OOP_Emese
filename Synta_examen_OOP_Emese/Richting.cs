@@ -15,9 +15,9 @@ namespace Synta_examen_OOP_Emese
         public string Naam { get { return naam; } set { naam = value; } }
         public string Graad { get { return graad; } set { graad = value; } }
 
-        public static List<Vak> VakLijstRichting = new List<Vak>();
+        public  List<Vak> VakLijstRichting = new List<Vak>();
 
-        public static List<Leerling> LeerlingLijstRichting = new List<Leerling>();
+        public  List<Leerling> LeerlingLijstRichting = new List<Leerling>();
 
 
         public void InschrijvingStudent(Leerling rLeerling)
@@ -50,5 +50,6 @@ namespace Synta_examen_OOP_Emese
             Naam = bNaam;
         }
 
+      
     }
 }

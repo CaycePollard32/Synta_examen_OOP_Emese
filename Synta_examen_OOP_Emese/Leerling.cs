@@ -53,8 +53,11 @@ namespace Synta_examen_OOP_Emese
             {
                 Console.WriteLine("Student heeft geen rapport");
             }
-
-            LeerlingRapport.drukRapportAf();
+            else
+            {
+                LeerlingRapport.drukRapportAf();
+            }
+          
         }
 
         public Leerling(string lVoornaam, string lAchternaam)

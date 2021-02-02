@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Synta_examen_OOP_Emese
 {
     class Program
     {
+        public static List<Leerling> AlleLeerlingen = new List<Leerling>();
+        public static List<Richting> AlleRichtingen = new List<Richting>();
+
         static void Main(string[] args)
         {
 
@@ -16,6 +20,16 @@ namespace Synta_examen_OOP_Emese
             Leerling leerling5 = new Leerling { Achternaam = "Niezel", Voornaam = "Pim", Leeftijd = 15, Woonplaats = "Mechelen", Geslacht = "man", Leerjaar = "vierde", RichtingNaam = "ASO - Economie-Wetenschappen" };
             Leerling leerling6 = new Leerling { Achternaam = "Dommel", Voornaam = "Tom", Leeftijd = 15, Woonplaats = "Mechelen", Geslacht = "man", Leerjaar = "vierde", RichtingNaam = "ASO - Economie-Wetenschappen" };
             Leerling leerling7 = new Leerling { Achternaam = "Giechel", Voornaam = "Sara", Leeftijd = 15, Woonplaats = "Mechelen", Geslacht = "vrouw", Leerjaar = "vierde", RichtingNaam = "ASO - Economie-Wetenschappen" };
+
+            //Alle leerlingen toevoegen aan een Lijst
+
+            AlleLeerlingen.Add(leerling1);
+            AlleLeerlingen.Add(leerling2);
+            AlleLeerlingen.Add(leerling3);
+            AlleLeerlingen.Add(leerling4);
+            AlleLeerlingen.Add(leerling5);
+            AlleLeerlingen.Add(leerling6);
+            AlleLeerlingen.Add(leerling7);
 
 
             //aanmaak Vak objecten
@@ -49,6 +63,11 @@ namespace Synta_examen_OOP_Emese
 
             Richting richting3 = new Richting { Naam = "ASO - Economie-Wetenschappen", Graad = "tweede" };
 
+            //Alle Richtingen toevoegen aan een lijst
+
+            AlleRichtingen.Add(richting1);
+            AlleRichtingen.Add(richting2);
+            AlleRichtingen.Add(richting3);
 
             //aanmaak Rapport objecten
 
@@ -57,6 +76,20 @@ namespace Synta_examen_OOP_Emese
             Rapport rapport3 = new Rapport { ID = "ABC03", Naam = "Rapport voor de derde graad", Graad = "derde" };
 
 
+            //Leerlingen toevoegen aan een Richting
+
+            foreach (var student in AlleLeerlingen)
+            {
+                foreach (var richting in AlleRichtingen)
+                {
+                    if (student.RichtingNaam == richting.Naam)
+                    {
+                        richting.InschrijvingStudent(student);
+                    }
+                }
+               
+
+            }
 
 
         }

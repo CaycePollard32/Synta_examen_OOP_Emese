@@ -9,15 +9,16 @@ namespace Synta_examen_OOP_Emese
         public static List<Richting> AlleRichtingen = new List<Richting>();
         public static List<Leerkracht> AlleLeerkrachten = new List<Leerkracht>();
         public static List<Vak> AlleVakken = new List<Vak>();
+        public static List<Rapport> AlleRapporten = new List<Rapport>();
 
         static void Main(string[] args)
         {
 
             //aanmaak Leerling objecten
 
-            Leerling leerling1 = new Leerling { Achternaam = "Doc", Voornaam = "Jan", Leeftijd= 15, Woonplaats="Mechelen", Geslacht ="man", Leerjaar="vierde", RichtingNaam="ASO - Economie-Moderne talen" };
+            Leerling leerling1 = new Leerling { Achternaam = "Doc", Voornaam = "Jan", Leeftijd = 15, Woonplaats = "Mechelen", Geslacht = "man", Leerjaar = "vierde", RichtingNaam = "ASO - Economie-Moderne talen" };
             Leerling leerling2 = new Leerling { Achternaam = "Stoetel", Voornaam = "Jan", Leeftijd = 15, Woonplaats = "Mechelen", Geslacht = "man", Leerjaar = "vierde", RichtingNaam = "ASO - Economie-Wetenschappen" };
-            Leerling leerling3 = new Leerling { Achternaam = "Bloosje", Voornaam = "Lieve", Leeftijd = 16, Woonplaats = "Mechelen", Geslacht = "man", Leerjaar = "vijfde", RichtingNaam = "ASO - Economie-Wiskunde" };
+            Leerling leerling3 = new Leerling { Achternaam = "Bloosje", Voornaam = "Lieve", Leeftijd = 16, Woonplaats = "Mechelen", Geslacht = "vrouw", Leerjaar = "vijfde", RichtingNaam = "ASO - Economie-Wiskunde" };
             Leerling leerling4 = new Leerling { Achternaam = "Grumpie", Voornaam = "Charlotte", Leeftijd = 17, Woonplaats = "Mechelen", Geslacht = "vrouw", Leerjaar = "zesde", RichtingNaam = "ASO - Economie-Wiskunde" };
             Leerling leerling5 = new Leerling { Achternaam = "Niezel", Voornaam = "Pim", Leeftijd = 15, Woonplaats = "Mechelen", Geslacht = "man", Leerjaar = "vierde", RichtingNaam = "ASO - Economie-Wetenschappen" };
             Leerling leerling6 = new Leerling { Achternaam = "Dommel", Voornaam = "Tom", Leeftijd = 15, Woonplaats = "Mechelen", Geslacht = "man", Leerjaar = "vierde", RichtingNaam = "ASO - Economie-Wetenschappen" };
@@ -36,17 +37,17 @@ namespace Synta_examen_OOP_Emese
 
             //aanmaak Vak objecten
 
-            Vak vak1 = new Vak { Naam = "Wiskunde", Graad = "vierde", Leerplan="BOBIO4W" };
-            Vak vak2 = new Vak { Naam = "Wiskunde", Graad = "vijfde", Leerplan = "BOBIO5W" };
-            Vak vak3 = new Vak { Naam = "Wiskunde", Graad = "zesde", Leerplan = "BOBIO6W" };
-            Vak vak4 = new Vak { Naam = "Economie", Graad = "vierde", Leerplan = "BOBIO4E" };
-            Vak vak5 = new Vak { Naam = "Economie", Graad = "vijfde", Leerplan = "BOBIO5E" };
-            Vak vak6 = new Vak { Naam = "Economie", Graad = "zesde", Leerplan = "BOBIO6E" };
+            Vak vak1 = new Vak { Naam = "Nederlands", Graad = "vierde", Leerplan = "BOBIO4W" };
+            Vak vak2 = new Vak { Naam = "Programmering", Graad = "vijfde", Leerplan = "BOBIO5W" };
+            Vak vak3 = new Vak { Naam = "Lichaamlijke opvoeding", Graad = "zesde", Leerplan = "BOBIO6W" };
+            Vak vak4 = new Vak { Naam = "Dans", Graad = "vierde", Leerplan = "BOBIO4E" };
+            Vak vak5 = new Vak { Naam = "Informatika", Graad = "vijfde", Leerplan = "BOBIO5E" };
+            Vak vak6 = new Vak { Naam = "Economie6", Graad = "zesde", Leerplan = "BOBIO6E" };
             Vak vak7 = new Vak { Naam = "Wetenschappen", Graad = "zesde", Leerplan = "BOBIO6P" };
 
             //aanmaak Leerkracht objecten
 
-            Leerkracht leerkracht1 = new Leerkracht { Achternaam = "Lakhiani", Voornaam = "Vishen", Geslacht="man", Leeftijd=42, Loon=3000, Woonplaats="Mechelen" };
+            Leerkracht leerkracht1 = new Leerkracht { Achternaam = "Lakhiani", Voornaam = "Vishen", Geslacht = "man", Leeftijd = 42, Loon = 3000, Woonplaats = "Mechelen" };
             Leerkracht leerkracht2 = new Leerkracht { Achternaam = "Kwik", Voornaam = "Jim", Geslacht = "man", Leeftijd = 42, Loon = 3000, Woonplaats = "Mechelen" };
             Leerkracht leerkracht3 = new Leerkracht { Achternaam = "Byron", Voornaam = "Katie", Geslacht = "vrouw", Leeftijd = 42, Loon = 5000, Woonplaats = "Mechelen" };
             Leerkracht leerkracht4 = new Leerkracht { Achternaam = "Angelou", Voornaam = "Maya", Geslacht = "vrouw", Leeftijd = 78, Loon = 3000, Woonplaats = "Mechelen" };
@@ -73,7 +74,7 @@ namespace Synta_examen_OOP_Emese
 
             //aanmaak Rapport objecten
 
-            Rapport rapport2 = new Rapport { ID = "ABC02", Naam = "Rapport voor de tweede graad", Graad="derde" };
+            Rapport rapport2 = new Rapport { ID = "ABC02", Naam = "Rapport voor de tweede graad", Graad = "derde" };
 
             Rapport rapport3 = new Rapport { ID = "ABC03", Naam = "Rapport voor de derde graad", Graad = "derde" };
 
@@ -89,7 +90,7 @@ namespace Synta_examen_OOP_Emese
                         richting.InschrijvingStudent(student);
                     }
                 }
-               
+
 
             }
 
@@ -150,6 +151,7 @@ namespace Synta_examen_OOP_Emese
                 }
             }
 
+            Console.WriteLine("Vrouwelijke Studenten: ");
             foreach (var s in slimmeStudenten)
             {
                 Console.WriteLine($"Naam: {s.Achternaam}, {s.Voornaam}: Geslacht = {s.Geslacht}, Richting: {s.RichtingNaam}, Leeftijd: {s.Leeftijd} ");
@@ -158,12 +160,47 @@ namespace Synta_examen_OOP_Emese
 
             //Queue aanmaken met leerlingen en hun studierichting + afdrukken
 
-            // Punten ingeven voor een studentrapport
-
-            //Print de rapport van een Leerling
+            Queue<Leerling> studentQueue = new Queue<Leerling>(AlleLeerlingen);
 
 
+            Console.WriteLine("\n\nAlle leerlingen: ");
+            foreach (var s in studentQueue)
+            {
+                Console.WriteLine($"Naam: {s.Achternaam}, {s.Voornaam}: Geslacht = {s.Geslacht}, Richting: {s.RichtingNaam}");
+            }
 
+
+
+            // De Richtingen hebben een Lijst met hun vakken daarin
+            // richting.VakLijstRichting moet gekopierd worden naar richting.rapportDict als sleutelwaarde. Daarvoor heb ik een methode AddVakken aangemaakt bij de klasse Rapport.
+
+            rapport2.AddVakken(richting1);
+            rapport3.AddVakken(richting2);
+
+            // Add rapport voor leerlingen
+
+            leerling1.AddRapport(rapport2);
+            leerling2.AddRapport(rapport3);
+
+
+            //Geef punten in voor de vakken van een Leerling en druk rapport
+            // Voor de punten gebruik ik een random nummer
+
+      
+            leerling1.AddMijnPunten(vak1, 15);
+            leerling1.AddMijnPunten(vak2, 16);
+            leerling1.AddMijnPunten(vak3, 5);
+            leerling1.AddMijnPunten(vak4, 4);
+            leerling1.AddMijnPunten(vak5, 20);
+
+            //leerling met een rapport
+            leerling1.DrukMijnRapportAf();
+
+            //leerling zonder rapport
+            leerling2.DrukMijnRapportAf();
+           
+
+         
         }
     }
 }

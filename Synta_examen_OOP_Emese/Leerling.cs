@@ -14,13 +14,11 @@ namespace Synta_examen_OOP_Emese
 
         public Rapport LeerlingRapport = new Rapport();
 
-        // heeft een richting object
-        // heeft een rapport hierin worden punten bijgehouden van de vakken van de studierichting.
 
 
         // heeft een drukRapportAf() methode 
 
-        public Leerling(Rapport lRapport)
+        public void AddRapport(Rapport lRapport)
         {
             LeerlingRapport = lRapport;
         }
@@ -45,14 +43,23 @@ namespace Synta_examen_OOP_Emese
 
         }
 
+        public void AddMijnPunten(Vak lVak, int lPunt)
+        {
+            LeerlingRapport.rapportDict[lVak] = lPunt;
+            LeerlingRapport.ingevuld = true;
+        }
+
         public void DrukMijnRapportAf()
         {
-            Console.WriteLine($"Student Naam: {Achternaam}, {Voornaam}");
 
-            if (LeerlingRapport == null)
+
+            Console.WriteLine($"\n\nStudent Naam: {Achternaam}, {Voornaam}");
+
+            if (LeerlingRapport.ingevuld == false)
             {
                 Console.WriteLine("Student heeft geen rapport");
             }
+
             else
             {
                 LeerlingRapport.drukRapportAf();

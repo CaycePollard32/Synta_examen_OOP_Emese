@@ -11,8 +11,6 @@ namespace Synta_examen_OOP_Emese
         public string ID { get { return id; } set { id = value; } }
 
 
-        Leerling leerlingR = new Leerling();
-
         Dictionary<Vak, int> rapportDict = new Dictionary<Vak, int>();
 
 
@@ -21,6 +19,17 @@ namespace Synta_examen_OOP_Emese
             rapportDict.Add(rVak, aPunt);
         }
 
+
+        public void drukRapportAf()
+        {
+            Console.WriteLine("Rapport ID: " + id);
+
+            foreach (var item in rapportDict)
+            {
+                Console.WriteLine($"Vak: {item.Key.Naam}, Punt: {item.Value}, Percentage: {(100 * item.Value) / 20}%");
+            }
+
+        }
 
 
         public Rapport()

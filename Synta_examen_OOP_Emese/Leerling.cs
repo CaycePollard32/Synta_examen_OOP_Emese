@@ -12,11 +12,21 @@ namespace Synta_examen_OOP_Emese
 
         public string Leerjaar { get; set; }
 
+        public Rapport LeerlingRapport = new Rapport();
+
         // heeft een richting object
         // heeft een rapport hierin worden punten bijgehouden van de vakken van de studierichting.
 
 
         // heeft een drukRapportAf() methode 
+
+        public Leerling(Rapport lRapport)
+        {
+            LeerlingRapport = lRapport;
+        }
+
+
+  
 
         public Leerling()
         {
@@ -33,6 +43,18 @@ namespace Synta_examen_OOP_Emese
             Leerjaar = lLeerjaar;
             RichtingNaam = lRichtingNaam;
 
+        }
+
+        public void DrukMijnRapportAf()
+        {
+            Console.WriteLine($"Student Naam: {Achternaam}, {Voornaam}");
+
+            if (LeerlingRapport == null)
+            {
+                Console.WriteLine("Student heeft geen rapport");
+            }
+
+            LeerlingRapport.drukRapportAf();
         }
 
         public Leerling(string lVoornaam, string lAchternaam)

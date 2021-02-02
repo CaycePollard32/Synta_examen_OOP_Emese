@@ -76,7 +76,7 @@ namespace Synta_examen_OOP_Emese
             Rapport rapport3 = new Rapport { ID = "ABC03", Naam = "Rapport voor de derde graad", Graad = "derde" };
 
 
-            //Leerlingen toevoegen aan een Richting
+            //Leerlingen toevoegen aan een Richtingen als Student.RichtingNaam = Richting.Naam 
 
             foreach (var student in AlleLeerlingen)
             {
@@ -90,6 +90,46 @@ namespace Synta_examen_OOP_Emese
                
 
             }
+
+            //Vakken toevoegen aan een Richtingen
+
+            richting1.AddVakken(vak1);
+            richting1.AddVakken(vak2);
+            richting1.AddVakken(vak3);
+            richting1.AddVakken(vak4);
+            richting1.AddVakken(vak5);
+
+            richting2.AddVakken(vak1);
+            richting2.AddVakken(vak2);
+            richting2.AddVakken(vak3);
+            richting2.AddVakken(vak6);
+            richting2.AddVakken(vak7);
+
+            richting3.AddVakken(vak1);
+            richting3.AddVakken(vak4);
+            richting3.AddVakken(vak5);
+            richting3.AddVakken(vak6);
+            richting3.AddVakken(vak7);
+
+            //Leerkrachten toevoegen aan vakken
+
+            vak1.AddLeerkracht(leerkracht1);
+            vak2.AddLeerkracht(leerkracht2);
+            vak3.AddLeerkracht(leerkracht3);
+            vak4.AddLeerkracht(leerkracht4);
+            vak5.AddLeerkracht(leerkracht1);
+            vak6.AddLeerkracht(leerkracht2);
+            vak7.AddLeerkracht(leerkracht3);
+
+            //Vakken toevoegen aan Leerkrachten
+
+
+
+            //Stack aanmaken met alle vrouwelijke studenten daarin
+
+
+            //Queue aanmaken met leerlingen en hun studierichting + afdrukken
+
 
 
         }

@@ -13,7 +13,7 @@ namespace Synta_examen_OOP_Emese
         public string Leerplan { get { return leerplan; } set { leerplan = value; } }
    
 
-        public static Leerkracht Leraar = new Leerkracht();
+        public  Leerkracht Leraar = new Leerkracht();
 
         public Vak()
         {

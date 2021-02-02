@@ -7,6 +7,8 @@ namespace Synta_examen_OOP_Emese
     {
         public static List<Leerling> AlleLeerlingen = new List<Leerling>();
         public static List<Richting> AlleRichtingen = new List<Richting>();
+        public static List<Leerkracht> AlleLeerkrachten = new List<Leerkracht>();
+        public static List<Vak> AlleVakken = new List<Vak>();
 
         static void Main(string[] args)
         {
@@ -121,14 +123,44 @@ namespace Synta_examen_OOP_Emese
             vak6.AddLeerkracht(leerkracht2);
             vak7.AddLeerkracht(leerkracht3);
 
-            //Vakken toevoegen aan Leerkrachten
+            //Vakken toevoegen aan Leerkrachten 
+
+            foreach (var vak in AlleVakken)
+            {
+                foreach (var leraar in AlleLeerkrachten)
+                {
+                    if (vak.Leraar == leraar)
+                    {
+                        leraar.AddMijnVakken(vak);
+                    }
+                }
+            }
 
 
 
-            //Stack aanmaken met alle vrouwelijke studenten daarin
+            //Stack aanmaken + alle vrouwelijke studenten toevoegen + afdrukken
+
+            Stack<Leerling> slimmeStudenten = new Stack<Leerling>();
+
+            foreach (var student in AlleLeerlingen)
+            {
+                if (student.Geslacht == "vrouw")
+                {
+                    slimmeStudenten.Push(student);
+                }
+            }
+
+            foreach (var s in slimmeStudenten)
+            {
+                Console.WriteLine($"Naam: {s.Achternaam}, {s.Voornaam}: Geslacht = {s.Geslacht}, Richting: {s.RichtingNaam}, Leeftijd: {s.Leeftijd} ");
+            }
 
 
             //Queue aanmaken met leerlingen en hun studierichting + afdrukken
+
+            // Punten ingeven voor een studentrapport
+
+            //Print de rapport van een Leerling
 
 
 
